@@ -56,9 +56,12 @@ class Board:
     def evaluate(self):
         winner = self.check_win()
 
-        if winner == "X":
-            return 1
-        elif winner == "O":
-            return -1
+        if winner == "O":
+            self.winner = "O"
+            return 100
+        elif winner == "X":
+            self.winner = "X"
+            return -100
         else:
+            self.winner = "TIE"
             return 0
