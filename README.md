@@ -28,7 +28,7 @@ If $x > 3$, then the minizing node would pick 3 since it's the smaller value. Th
 
 So regardless of $x$'s value, the value that the nodes at and above the layer of node with val=3 are unaffected by it.
 
-### Optimization
+### Implementation Detail
 We can implement this by keeping track of alpha and beta score for each recursion call, where alpha is the best possible score found, and beta is the minimum score found. If alpha is greater than or equal than beta, then we can prune any branches below it since we have already found a branch that we will always choose over any of the current branch's children. 
 
 [ab-pruning]: /ab-pruning.png

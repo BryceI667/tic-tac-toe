@@ -29,6 +29,7 @@ class Board:
                 viable_moves.append(idx)
         return viable_moves
     
+    
     def is_game_over(self):
         return self.check_win() is not None or len(self.get_legal_moves()) == 0
 
